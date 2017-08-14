@@ -12,7 +12,7 @@ var board = {
 function startGame () {
     //var countSurroundingMines = board.cells.
     for (var i=0; i<board.cells.length; i++) {
-      var countSurroundingMines = board.cells[i].surroundingMines
+    board.cells[i].surroundingMines = countSurroundingMines(board.cells[i])
     }
 
 
