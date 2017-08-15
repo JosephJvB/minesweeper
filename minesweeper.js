@@ -9,10 +9,13 @@ var board = {
              ]
     }
 
+//My notation for my cells objects is a bit weird but it helps me visualise the 3x3 grid nicely.
+
+
 function startGame () {
     //var countSurroundingMines = board.cells.
-    for (var i=0; i<board.cells.length; i++) {
-    board.cells[i].surroundingMines = countSurroundingMines(board.cells[i])
+    for (var i=0; i<board.cells.length; i++) { //Loops through board, through cells
+    board.cells[i].surroundingMines = countSurroundingMines(board.cells[i])  //adds surroundingMine PROPERTY to each cell with a VALUE generated from the cSM FUNCTION.
     }
 
 
@@ -43,12 +46,12 @@ function checkForWin () {
 
 function countSurroundingMines (cell) {
   var count = 0;
-  var surroundingMines = lib.getSurroundingCells(cell.row, cell.col)
-  for (var x = 0; x<getSurroundingCells;x++) {
-  if (surroundingMines.isMine) {
+  var surroundingCells = lib.getSurroundingCells(cell.row, cell.col)  //this bit is weird to me
+  for (var x = 0; x<surroundingCells;x++) {  //looping through the array that holds surrounding cells data.
+  if (surroundingCells[x].isMine) {  //if the loop finds the property isMine in an object in that array, then +1 to count of surrounding mines
     count++;
   }
 }
 
 
-}
+};
