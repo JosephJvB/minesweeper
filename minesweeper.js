@@ -47,7 +47,7 @@ function checkForWin () {
 function countSurroundingMines (cell) {
   var count = 0;
   var surroundingCells = lib.getSurroundingCells(cell.row, cell.col)  //this bit is weird to me
-  for (var x = 0; x<surroundingCells;x++) {  //looping through the array that holds surrounding cells data.
+  for (var x = 0; x<surroundingCells.length;x++) {  //looping through the array that holds surrounding cells data.
   if (surroundingCells[x].isMine) {  //if the loop finds the property isMine in an object in that array, then +1 to count of surrounding mines
     count++;
   }
