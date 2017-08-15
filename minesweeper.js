@@ -13,9 +13,9 @@ var board = {
 
 
 function startGame () {
-    //var countSurroundingMines = board.cells.
-    for (var i=0; i<board.cells.length; i++) { //Loops through board, through cells
-    board.cells[i].surroundingMines = countSurroundingMines(board.cells[i])  //adds surroundingMine PROPERTY to each cell with a VALUE generated from the cSM FUNCTION.
+    var allCells = board.cells;
+    for (var i=0; i<allCells.length; i++) { //Loops through board, through cells
+    allCells[i].surroundingMines = countSurroundingMines(allCells[i])  //adds surroundingMine PROPERTY to each cell with a VALUE generated from the cSM FUNCTION.
     }
 
 
