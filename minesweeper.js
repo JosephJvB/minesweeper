@@ -28,7 +28,9 @@ function startGame () {
 // 1. Are all of the cells that are NOT mines visible?
 // 2. Are all of the mines marked?
 function checkForWin () {
-
+  document.addEventListener('contextmenu')
+  document.addEventListener('click')
+  checkForWin (); //can I call the function here since it applies to both - rather than repeat it in both brackets?
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
   //   lib.displayMessage('You win!')
