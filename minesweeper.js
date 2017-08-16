@@ -32,13 +32,12 @@ function startGame () {
 // 2. Are all of the mines marked?
 function checkForWin () {
   for (var z =0; z < allCells.length; z++) {   //gonna loop thru boardcells hells ya
-    if () {
-
-    } else if () {
-
+    if (allCells[z].isMine && allCells[z].isMarked && allCells[z].hidden === false) {
+   lib.displayMessage('You win!')
     } else {
-      
-    }
+      return
+    } //im almost certain this is lazy and incorrect. Needs more work.
+
   }
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
