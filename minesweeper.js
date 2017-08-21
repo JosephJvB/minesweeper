@@ -16,9 +16,9 @@ function startGame () {
     for (var i=0; i<allCells.length; i++) { //Loops through board, through cells
     allCells[i].surroundingMines = countSurroundingMines(allCells[i])  //adds surroundingMine PROPERTY to each cell with a VALUE generated from the cSM FUNCTION.
 
-    document.addEventListener('contextmenu')
-    document.addEventListener('click')
-    checkForWin (); //can I call the function here since it applies to both - rather than repeat it in both brackets?
+    document.addEventListener('contextmenu', checkForWin)
+    document.addEventListener('click', checkForWin)
+    //checkForWin (); //can I call the function here since it applies to both - rather than repeat it in both brackets? NOPE
     }
 
 
@@ -32,7 +32,7 @@ function startGame () {
 // 2. Are all of the mines marked?
 function checkForWin () {
   for (var z =0; z < allCells.length; z++) {   //gonna loop thru boardcells hells ya
-    if (allCells[z].isMine && allCells[z].isMarked || !allCells[z].hidden && !allCells[z].isMine) {
+    if ((allCells[z].isMine && allCells[z].isMarked) || ()!allCells[z].hidden && !allCells[z].isMine)) {
    lib.displayMessage('You win!')
     } else {
       return
